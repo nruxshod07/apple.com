@@ -2,7 +2,6 @@ let img = document.querySelector('.iPhone')
 let btns = document.querySelectorAll('.btn')
 let box = document.querySelector('.colors')
 let color = document.querySelector('.color')
-let main = document.querySelector('main')
 let photo = {
     purple: "./img/purpleiPhone.png",
     gold: "./img/goldiPhone.png",
@@ -13,12 +12,12 @@ let photo = {
 
 btns.forEach((btn) => {
     btn.onclick = () => {
-        ; let key = btn.getAttribute('data-btn')
+        let key = btn.getAttribute('data-btn')
         img.src = photo[key]
         let clicked = event.target
         box.addEventListener('click', (event) => {
             for (let i = 0; i < btns.length; i++) {
-                btns[i].classList.remove('focus'); f
+                btns[i].classList.remove('focus');
             }
             clicked.classList.add('focus')
         });
