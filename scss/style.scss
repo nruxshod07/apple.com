@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 .header {
   display: flex;
@@ -18,7 +19,6 @@
   }
   & div:active {
     color: blue;
-    font-weight: bolder;
   }
   font-size: 14px;
 }
@@ -68,14 +68,11 @@ main {
   justify-content: space-between;
   & .left {
     .iPhone {
-      margin-top:100px ;
-      top: 100px;
+      margin-top: 70px;
+      top: 200px;
       border-radius: 30px;
       width: 900px;
       height: 590px;
-      position: sticky;
-    }
-    .iPhone {
       position: sticky;
     }
     & .title {
@@ -89,62 +86,87 @@ main {
       }
     }
     & .right {
-      & .getCash {
+      & div {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        align-items: end;
-        & div {
-          cursor: pointer;
-          border-radius: 20px;
-          background-color: whitesmoke;
+        align-items: center;
+      }
+    }
+  }
+  .getCash {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .plus {
+    margin-left: 5px;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    background: linear-gradient(black, black), linear-gradient(black, black),
+      whitesmoke;
+    background-position: center;
+    background-size: 50% 1px, 1px 50%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 0.5px solid black;
+  }
+  .hover {
+    padding: 5px;
+    border: 0.5px solid gray;
+  }
+  .CashBack {
+    width: 280px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .trade-in {
+    width: 230px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .CashBack:hover {
+    & .plus {
+      display: inline-block;
+      width: 13px;
+      height: 14px;
 
-          font-size: 13px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .plus {
-          margin-left: 5px;
-          display: inline-block;
-          width: 13px;
-          height: 13px;
-          background: linear-gradient(black, black),
-            linear-gradient(black, black), whitesmoke;
-          background-position: center;
-          background-size: 50% 1px, 1px 50%;
-          background-repeat: no-repeat;
-          border-radius: 100%;
-          border: 0.5px solid black;
-        }
-        .plus:hover {
-          display: inline-block;
-          width: 13px;
-          height: 13px;
+      background: linear-gradient(white, white), linear-gradient(white, white),
+        black;
+      background-position: center;
+      background-size: 50% 1px, 1px 50%;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      border: 0.5px solid black;
+    }
+  }
+  .trade-in:hover {
+    & .plus {
+      display: inline-block;
+      width: 13px;
+      height: 14px;
 
-          background: linear-gradient(white, white),
-            linear-gradient(white, white), black;
-          background-position: center;
-          background-size: 50% 1px, 1px 50%;
-          background-repeat: no-repeat;
-          border-radius: 100%;
-          border: 0.5px solid black;
-        }
-      }
-      & .CashBack {
-        margin-top: 20px;
-        padding: 18px;
-      }
-      & .trade-in {
-        padding: 15px;
-        justify-content: end;
-      }
-      & .trade-in:active {
-        border: 1px solid black;
-      }
-      & .CashBack:active {
-        border: 1px solid black;
-      }
+      background: linear-gradient(white, white), linear-gradient(white, white),
+        black;
+      background-position: center;
+      background-size: 50% 1px, 1px 50%;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      border: 0.5px solid black;
     }
   }
   .best {
@@ -199,10 +221,10 @@ main {
     }
   }
   .Pro:active {
-    border: 2px solid blue;
+    border: 1px solid blue;
   }
   .ProMax:active {
-    border: 2px solid blue;
+    border: 1px solid blue;
   }
   .Help {
     display: flex;
@@ -212,6 +234,7 @@ main {
     padding: 12px;
     font-size: 17px;
     border-radius: 15px;
+    cursor: pointer;
     .plus {
       display: inline-block;
       width: 13px;
@@ -225,7 +248,9 @@ main {
       border-radius: 100%;
       border: 0.5px solid black;
     }
-    .plus:hover {
+  }
+  .Help:hover {
+    & .plus {
       display: inline-block;
       width: 13px;
       height: 13px;
@@ -252,132 +277,109 @@ main {
     justify-content: start;
     align-items: center;
     padding: 20px;
-  }
-  .purple img {
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    cursor: pointer;
-    margin-right: 15px;
-    border: 1px solid whitesmoke;
-  }
-  .gold img {
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    cursor: pointer;
-    margin-right: 15px;
-    border: 1px solid whitesmoke;
-  }
-  .silver img {
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    cursor: pointer;
-    margin-right: 15px;
-    border: 1px solid whitesmoke;
-  }
-  .spaceBlack img {
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    cursor: pointer;
-    border: 1px solid whitesmoke;
-  }
-  .purple img:active {
-    border-color: black;
-  }
-  .gold img:active {
-    border-color: black;
-  }
-  .silver img:active {
-    border-color: black;
-  }
-  .spaceBlack img:active {
-    border-color: black;
-  }
-  .storagesTitle {
-    margin-top: 160px;
-    display: flex;
-    font-size: 13px;
-    & h1 {
-      font-weight: lighter;
+    margin-bottom: 200px;
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    & img {
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    & .focus {
+      border: 2px solid blue;
     }
   }
-  .GB128 {
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: whitesmoke;
 
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 350px;
-    margin: 15px 0 0 0;
-    padding: 14px;
-    & p {
-      width: 130px;
-    }
-    & h1 {
-      font-size: 20px;
-    }
+  margin-top: 160px;
+  display: flex;
+  font-size: 13px;
+  & h1 {
+    font-weight: lighter;
   }
-  .GB256 {
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: whitesmoke;
+}
+.GB128 {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
 
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 350px;
-    margin: 15px 0 0 0;
-    padding: 14px;
-    & p {
-      width: 130px;
-    }
-    & h1 {
-      font-size: 20px;
-    }
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+  margin: 15px 0 0 0;
+  padding: 14px;
+  & p {
+    width: 130px;
   }
-  .GB512 {
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: whitesmoke;
-
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 350px;
-    margin: 15px 0 0 0;
-    padding: 14px;
-    & p {
-      width: 130px;
-    }
-    & h1 {
-      font-size: 20px;
-    }
+  & h1 {
+    font-size: 20px;
   }
-  .TB1 {
-    cursor: pointer;
-    border-radius: 20px;
-    background-color: whitesmoke;
+}
+.GB256 {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
 
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 350px;
-    margin: 15px 0 0 0;
-    padding: 14px;
-    & p {
-      width: 130px;
-    }
-    & h1 {
-      font-size: 20px;
-    }
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+  margin: 15px 0 0 0;
+  padding: 14px;
+  & p {
+    width: 130px;
+  }
+  & h1 {
+    font-size: 20px;
+  }
+}
+.GB512 {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
+
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+  margin: 15px 0 0 0;
+  padding: 14px;
+  & p {
+    width: 130px;
+  }
+  & h1 {
+    font-size: 20px;
+  }
+}
+.TB1 {
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
+
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+  margin: 15px 0 0 0;
+  padding: 14px;
+  & p {
+    width: 130px;
+  }
+  & h1 {
+    font-size: 20px;
   }
 }

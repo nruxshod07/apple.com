@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 .header {
@@ -21,7 +22,6 @@
 }
 .header div:active {
   color: blue;
-  font-weight: bolder;
 }
 
 main {
@@ -71,16 +71,16 @@ main {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  margin-top: 160px;
+  display: flex;
+  font-size: 13px;
 }
 .choice .left .iPhone {
-  margin-top: 100px;
-  top: 100px;
+  margin-top: 70px;
+  top: 200px;
   border-radius: 30px;
   width: 900px;
   height: 590px;
-  position: sticky;
-}
-.choice .left .iPhone {
   position: sticky;
 }
 .choice .left .title p {
@@ -91,26 +91,21 @@ main {
   font-size: 50px;
   margin-bottom: 10px;
 }
-.choice .left .right .getCash {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: end;
-}
-.choice .left .right .getCash div {
-  cursor: pointer;
-  border-radius: 20px;
-  background-color: whitesmoke;
-  font-size: 13px;
+.choice .left .right div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.choice .left .right .getCash .plus {
+.choice .getCash {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.choice .plus {
   margin-left: 5px;
   display: inline-block;
   width: 13px;
-  height: 13px;
+  height: 14px;
   background: linear-gradient(black, black), linear-gradient(black, black), whitesmoke;
   background-position: center;
   background-size: 50% 1px, 1px 50%;
@@ -118,10 +113,38 @@ main {
   border-radius: 100%;
   border: 0.5px solid black;
 }
-.choice .left .right .getCash .plus:hover {
+.choice .hover {
+  padding: 5px;
+  border: 0.5px solid gray;
+}
+.choice .CashBack {
+  width: 280px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  font-size: 12px;
+  margin-top: 20px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choice .trade-in {
+  width: 230px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  font-size: 12px;
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.choice .CashBack:hover .plus {
   display: inline-block;
   width: 13px;
-  height: 13px;
+  height: 14px;
   background: linear-gradient(white, white), linear-gradient(white, white), black;
   background-position: center;
   background-size: 50% 1px, 1px 50%;
@@ -129,19 +152,16 @@ main {
   border-radius: 100%;
   border: 0.5px solid black;
 }
-.choice .left .right .CashBack {
-  margin-top: 20px;
-  padding: 18px;
-}
-.choice .left .right .trade-in {
-  padding: 15px;
-  justify-content: end;
-}
-.choice .left .right .trade-in:active {
-  border: 1px solid black;
-}
-.choice .left .right .CashBack:active {
-  border: 1px solid black;
+.choice .trade-in:hover .plus {
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  background: linear-gradient(white, white), linear-gradient(white, white), black;
+  background-position: center;
+  background-size: 50% 1px, 1px 50%;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 0.5px solid black;
 }
 .choice .best {
   display: flex;
@@ -195,10 +215,10 @@ main {
   font-size: 13px;
 }
 .choice .Pro:active {
-  border: 2px solid blue;
+  border: 1px solid blue;
 }
 .choice .ProMax:active {
-  border: 2px solid blue;
+  border: 1px solid blue;
 }
 .choice .Help {
   display: flex;
@@ -208,6 +228,7 @@ main {
   padding: 12px;
   font-size: 17px;
   border-radius: 15px;
+  cursor: pointer;
 }
 .choice .Help .plus {
   display: inline-block;
@@ -220,7 +241,7 @@ main {
   border-radius: 100%;
   border: 0.5px solid black;
 }
-.choice .Help .plus:hover {
+.choice .Help:hover .plus {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -244,59 +265,33 @@ main {
   justify-content: start;
   align-items: center;
   padding: 20px;
+  margin-bottom: 200px;
 }
-.choice .purple img {
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  cursor: pointer;
-  margin-right: 15px;
-  border: 1px solid whitesmoke;
-}
-.choice .gold img {
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  cursor: pointer;
-  margin-right: 15px;
-  border: 1px solid whitesmoke;
-}
-.choice .silver img {
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  cursor: pointer;
-  margin-right: 15px;
-  border: 1px solid whitesmoke;
-}
-.choice .spaceBlack img {
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  cursor: pointer;
-  border: 1px solid whitesmoke;
-}
-.choice .purple img:active {
-  border-color: black;
-}
-.choice .gold img:active {
-  border-color: black;
-}
-.choice .silver img:active {
-  border-color: black;
-}
-.choice .spaceBlack img:active {
-  border-color: black;
-}
-.choice .storagesTitle {
-  margin-top: 160px;
+.choice .colors div {
   display: flex;
-  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 10px;
 }
-.choice .storagesTitle h1 {
+.choice .colors img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.choice .colors .focus {
+  border: 2px solid blue;
+}
+.choice h1 {
   font-weight: lighter;
 }
-.choice .GB128 {
+
+.GB128 {
   cursor: pointer;
   border-radius: 20px;
   background-color: whitesmoke;
@@ -308,13 +303,14 @@ main {
   margin: 15px 0 0 0;
   padding: 14px;
 }
-.choice .GB128 p {
+.GB128 p {
   width: 130px;
 }
-.choice .GB128 h1 {
+.GB128 h1 {
   font-size: 20px;
 }
-.choice .GB256 {
+
+.GB256 {
   cursor: pointer;
   border-radius: 20px;
   background-color: whitesmoke;
@@ -326,13 +322,14 @@ main {
   margin: 15px 0 0 0;
   padding: 14px;
 }
-.choice .GB256 p {
+.GB256 p {
   width: 130px;
 }
-.choice .GB256 h1 {
+.GB256 h1 {
   font-size: 20px;
 }
-.choice .GB512 {
+
+.GB512 {
   cursor: pointer;
   border-radius: 20px;
   background-color: whitesmoke;
@@ -344,13 +341,14 @@ main {
   margin: 15px 0 0 0;
   padding: 14px;
 }
-.choice .GB512 p {
+.GB512 p {
   width: 130px;
 }
-.choice .GB512 h1 {
+.GB512 h1 {
   font-size: 20px;
 }
-.choice .TB1 {
+
+.TB1 {
   cursor: pointer;
   border-radius: 20px;
   background-color: whitesmoke;
@@ -362,9 +360,9 @@ main {
   margin: 15px 0 0 0;
   padding: 14px;
 }
-.choice .TB1 p {
+.TB1 p {
   width: 130px;
 }
-.choice .TB1 h1 {
+.TB1 h1 {
   font-size: 20px;
 }
