@@ -80,7 +80,7 @@ main {
   top: 200px;
   border-radius: 30px;
   width: 900px;
-  height: 590px;
+  height: 100%;
   position: sticky;
 }
 .choice .left .title p {
@@ -365,4 +365,9 @@ main {
 }
 .TB1 h1 {
   font-size: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
